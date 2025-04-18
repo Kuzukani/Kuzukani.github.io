@@ -2,53 +2,8 @@
 <html>
 <head>
   <meta http-equiv="refresh" content="0; url=https://www.conductor.com/">
-  <title>Text to QR Code Converter</title>
-  <style>
-    *{
-      box-sizing: border-box;
-    }
-    body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-
-      background-color: #111;
-    }
-    input{
-      padding:10px;
-      margin:10px;
-    }
-    .hidden{
-      display: none;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+  <title></title>
 </head>
 <body>
-  <input type="text" class="hide" id="text-input" placeholder="Enter text">
-  <button onclick="generateQRCode()" class="hide">Generate QR Code</button>
-  <br class="hide">
-  <canvas id="qrcode-canvas"></canvas>
-
-  <script>
-    function generateQRCode() {
-      var text = document.getElementById("text-input").value;
-      var canvas = document.getElementById("qrcode-canvas");
-      var qr = new QRious({
-        element: canvas,
-        value: text,
-        size: 500
-      });
-
-      let x = document.getElementsByClassName("hide");
-      let i;
-      for(i=0;i<x.length;i++){
-        x[0].setAttribute("class", "hidden");
-      }
-      x[0].setAttribute("class", "hidden");
-    }
-  </script>
 </body>
 </html>
